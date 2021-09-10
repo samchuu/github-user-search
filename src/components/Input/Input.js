@@ -7,7 +7,7 @@ function Input({ inputText, setInputText, userData, setUserData }) {
     axios
       .get(`https://api.github.com/users/samchuu`)
       .then((data) => setUserData(data.data));
-  }, []);
+  }, [setUserData]);
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
